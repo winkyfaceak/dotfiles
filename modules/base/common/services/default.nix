@@ -14,6 +14,7 @@ _: {
     ./matrix.nix
     ./miniflux.nix
     ./nextcloud.nix
+    ./overleaf.nix
     ./photoprism.nix
     ./vaultwarden.nix
     ./wakapi.nix

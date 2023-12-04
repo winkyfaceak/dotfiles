@@ -7,6 +7,10 @@
   self,
   ...
 }: {
+  imports = [
+    ./modules.nix
+  ];
+
   system = {
     autoUpgrade.enable = false;
     stateVersion = lib.mkDefault "23.05";

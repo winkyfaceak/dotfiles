@@ -11,6 +11,7 @@ _: {
     nginx.enable = true;
     cloudflared.enable = false;
     headscale.enable = true;
+    overleaf.enable = true;
 
     mailserver = {
       enable = true;
@@ -26,7 +27,7 @@ _: {
 
     database = {
       mysql.enable = false;
-      mongodb.enable = false;
+      mongodb.enable = true;
       postgresql.enable = true;
       redis.enable = true;
     };
