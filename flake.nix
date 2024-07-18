@@ -126,6 +126,18 @@
       };
     };
 
+    # Firefox but really locked down and air tight
+    # Nix topology a way to generate diagrams of your nix config
+    nix-topology = {
+      url = "github:oddlama/nix-topology";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "";
+        pre-commit-hooks-nix.follows = "";
+        devshell.follows = "";
+      };
+    };
+
     # firefox user.js
     arkenfox = {
       type = "github";
