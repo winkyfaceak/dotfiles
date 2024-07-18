@@ -1,26 +1,19 @@
 { inputs, ... }:
 {
-  imports = [
-    (
-      { lib, flake-parts-lib, ... }:
-      flake-parts-lib.mkTransposedPerSystemModule {
-        name = "topology";
-        file = ./default.nix;
-        option = lib.mkOption { type = lib.types.unspecified; };
-      }
-    )
-  ];
+  imports = [ inputs.nix-topology.flakeModule ];
 
   # nix build .#topology.x86_64-linux.config.output
-  perSystem =
-    { config, ... }:
-    {
-      topology = import inputs.nix-topology {
-        pkgs = config.legacyPackages;
-        modules = [
-          ./output.nix
-          { inherit (inputs.self) nixosConfigurations; }
+  perSystem = _: {
+    topology.modules = [
+      ./output.nix
+      {
+        nodes.node1.interfaces.lan.physicalConnections = [
+          {
+            node = "node2";
+            interface = "wan";
+          }
         ];
-      };
-    };
+      }
+    ];
+  };
 }

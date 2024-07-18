@@ -129,7 +129,10 @@
     # Firefox but really locked down and air tight
     # Nix topology a way to generate diagrams of your nix config
     nix-topology = {
-      url = "github:oddlama/nix-topology";
+      type = "github";
+      owner = "oddlama";
+      repo = "nix-topology";
+
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-utils.follows = "izvim/flake-utils";
