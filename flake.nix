@@ -20,6 +20,13 @@
       ref = "stc-ng-wsl";
     };
 
+    sprout = {
+      type = "github";
+      owner = "catgardens";
+      repo = "sprout";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # lix a good fork of nix
     lix = {
       type = "git";

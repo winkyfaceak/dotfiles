@@ -840,6 +840,7 @@
         "nixpkgs-small": "nixpkgs-small",
         "nixpkgs-wsl": "nixpkgs-wsl",
         "simple-nixos-mailserver": "simple-nixos-mailserver",
+        "sprout": "sprout",
         "systems": "systems_2",
         "treefmt-nix": "treefmt-nix",
         "vscode-server": "vscode-server"
@@ -935,6 +936,26 @@
         "owner": "simple-nixos-mailserver",
         "repo": "nixos-mailserver",
         "type": "gitlab"
+      }
+    },
+    "sprout": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721153241,
+        "narHash": "sha256-Ol6gs9ofd4GKDqgYsFCgV/QFQZ7pCBKxw7W97PjVUSc=",
+        "owner": "catgardens",
+        "repo": "sprout",
+        "rev": "4054ba2a7df51c12518b679e6f93282589e71265",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catgardens",
+        "repo": "sprout",
+        "type": "github"
       }
     },
     "systems": {

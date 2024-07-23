@@ -47,9 +47,15 @@ let
     }
   );
 
+  # test using extra libs from other sources
+  ext = lib0.fixedPoints.composeManyExtensions [
+    (_: _: lib0)
+    (_: _: inputs.sprout.lib)
+  ];
+
   # we need to extend gardenLib with the nixpkgs lib to get the full set of functions
   # if we do it the otherway around we will get errors saying mkMerge and so on don't exist
-  finalLib = gardenLib.extend (_: _: lib0);
+  finalLib = gardenLib.extend ext;
 in
 {
   flake.lib = finalLib;
