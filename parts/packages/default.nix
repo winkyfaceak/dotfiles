@@ -19,6 +19,10 @@
               # add a --call-package or -C cli option to build a package from the cli
               # based on the work of https://github.com/privatevoid-net/nix-super
               ./patches/lix-callpackage-cli.patch
+
+              # add tls to builtins.fetchurl
+              # https://gerrit.lix.systems/c/lix/+/1965
+              ./patches/lix-fetchurl-tls.patch
             ];
 
             # Kinda funny right
